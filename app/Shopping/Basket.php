@@ -11,8 +11,8 @@ use App\Shopping\BasketItem;
 class Basket
 {
     // we want $items to be a collection not an array so can use a constructor to set this (this is the one use of a constructor outside of passing in the intial arguments)
-    private $item;
-    private $itemsTotal = 0;
+    private string $item;
+    private int $itemsTotal = 0;
 
     public function add($basketItem)
     {
@@ -30,7 +30,7 @@ class Basket
     // }
 
 
-    public function total()
+    public function total() : string
     {
         $formattedPr = number_format($this->itemsTotal, 2, '.', '');
         return "£{$formattedPr}";
@@ -39,7 +39,7 @@ class Basket
     // map over array using collection method
     public function items()
     {
-        return $this->itemTypes;
+        
     }
 
 

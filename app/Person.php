@@ -8,8 +8,8 @@ namespace App;
 
 class Person
 {
-    private $firstName;
-    private $lastName;
+    private string $firstName;
+    private string $lastName;
 
     public function __construct($firstNameArg, $lastNameArg)
     {
@@ -17,7 +17,7 @@ class Person
         $this->lastName = $lastNameArg;
     }
 
-    public function sayHelloTo($otherPerson)
+    public function sayHelloTo($otherPerson) : string
     {
 
         // be careful with accessing properties on external objects like this. Better to create a getName method and then use that as part of the sayHelloTo method 

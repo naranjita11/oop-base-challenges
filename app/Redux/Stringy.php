@@ -8,7 +8,7 @@ namespace App\Redux;
 
 class Stringy
 {
-    private $str;
+    private string $str;
 
     public function __construct($strArg)
     {
@@ -19,31 +19,31 @@ class Stringy
 
     // in order to chain the functions, you need to update the $str property as part of the function and then return $this:
 
-    public function lower()
+    public function lower() : Stringy
     {
         $this->str = strtolower($this->str);
         return $this;
     }
 
-    public function upper()
+    public function upper() : Stringy
     {
         $this->str = strtoupper($this->str);
         return $this;
     }
 
-    public function append($newStr)
+    public function append($newStr) : Stringy
     {
         $this->str = ($this->str . $newStr);
         return $this;
     }
 
-    public function repeat($x)
+    public function repeat($x) : Stringy
     {
         $this->str = str_repeat($this->str, $x);
         return $this;
     }
 
-    public function get()
+    public function get() : string
     {
         return $this->str;
     }
