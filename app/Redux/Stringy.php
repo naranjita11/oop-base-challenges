@@ -15,6 +15,8 @@ class Stringy
         $this->str = $strArg;
     }
 
+    // In the first time of creating this class (in 04-classes - strings), the methods were getters but this time they are setters
+
     // in order to chain the functions, you need to update the $str property as part of the function and then return $this:
 
     public function lower()

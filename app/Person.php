@@ -19,6 +19,8 @@ class Person
 
     public function sayHelloTo($otherPerson)
     {
+
+        // be careful with accessing properties on external objects like this. Better to create a getName method and then use that as part of the sayHelloTo method 
         return "Hello {$otherPerson->firstName} {$otherPerson->lastName}";
 
     }
